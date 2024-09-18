@@ -21,9 +21,7 @@ const PostList = () => {
 
   return (
     <div className="max-w-5xl mx-auto mt-10 p-4 sm:p-6">
-      <h2 className="text-4xl font-bold mb-6 text-indigo-700">
-        All Blog Posts
-      </h2>
+      <h2 className="text-4xl font-bold mb-6 text-gray-600">All Blog Posts</h2>
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
         {posts.map((post) => (
           <div key={post._id} className="bg-white p-6 shadow-lg rounded-lg">
@@ -38,13 +36,13 @@ const PostList = () => {
             <div className="flex justify-between items-center">
               <button
                 onClick={() => handleDelete(post._id)}
-                className="text-red-500 hover:text-red-600"
+                className="text-red-600 hover:text-red-600"
               >
                 Delete
               </button>
               <Link
                 to={`/edit/${post._id}`}
-                className="text-indigo-600 hover:text-indigo-700"
+                className="text-indigo-700 hover:text-indigo-700"
               >
                 Edit
               </Link>
